@@ -68,3 +68,10 @@ while not game_end:
                 locations[player_2_index] = "o"
         
         screen()
+        if check_winner():
+            if locations.count("x") > locations.count("o"):
+                print("Player 1 Won")
+                game_end = True
+            else:
+                print("Player 2 Won")
+                game_end = True
